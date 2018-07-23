@@ -9,7 +9,9 @@
 import UIKit
 
 class ViewController: UIViewController {
-
+    
+    @IBOutlet weak var lbname1: UILabel!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
@@ -20,6 +22,15 @@ class ViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
 
-
+    
+    @IBOutlet weak var butcontrol: UIButton!
+    
+    @IBAction func btuConfimClicked(_ sender: Any) {
+        lbname1.text = "hello"
+        
+    }
+    
+    
+   
 }
 
