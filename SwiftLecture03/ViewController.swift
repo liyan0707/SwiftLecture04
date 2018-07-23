@@ -33,7 +33,6 @@ class ViewController: UIViewController {
         
         button.setTitle("ok",for:UIControlState.normal)
       
-        
     }
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
@@ -42,22 +41,41 @@ class ViewController: UIViewController {
             let loc = touch.location(in:self.touchview)
             
             print(" \(loc)")
+        
             
-            if(self.touchview.frame.contains(loc)){
-                self.touchview.backgroundColor =     UIColor.red ;
+        if(self.touchview.bounds.contains(loc)){
+                self.touchview.backgroundColor = UIColor.red ;
             }
             else {
-            self.touchview.backgroundColor =     UIColor.blue ;
-            }
             
+                self.touchview.backgroundColor =  UIColor.blue ;
+            }
         }
-        
     }
 
     override func touchesEnded(_ touches: Set<UITouch>, with event: UIEvent?) {
        print("end")
     }
     
+    
+    @IBOutlet weak var switchStatus: UISwitch!
+    @IBOutlet weak var slide01: UISlider!
+    @IBOutlet weak var stepper: UIStepper!
+    
+  
+    @IBAction func swtichChanged(_ sender: Any) {
+        print("switchChanged")
+        
     }
+    
+    @IBAction func adjustScore(_ sender: Any) {
+        //slide01.value = 20
+        //stepper.value =
+       // slide01.value = slide01.value+1
+        slide01.value = Float(stepper.value)
+        print("\(stepper.value)")
+    }
+    
+}
 
 
