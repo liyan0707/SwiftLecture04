@@ -22,15 +22,42 @@ class ViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
 
+    @IBOutlet weak var touchview: UIView!
     
-    @IBOutlet weak var butcontrol: UIButton!
+    
     
     @IBAction func btuConfimClicked(_ sender: Any) {
         lbname1.text = "hello"
         
+        let button = sender as! UIButton ;
+        
+        button.setTitle("ok",for:UIControlState.normal)
+      
+        
     }
     
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        print("touchesbegan")
+        if let touch = touches.first{
+            let loc = touch.location(in:self.touchview)
+            
+            print(" \(loc)")
+            
+            if(self.touchview.frame.contains(loc)){
+                self.touchview.backgroundColor =     UIColor.red ;
+            }
+            else {
+            self.touchview.backgroundColor =     UIColor.blue ;
+            }
+            
+        }
+        
+    }
+
+    override func touchesEnded(_ touches: Set<UITouch>, with event: UIEvent?) {
+       print("end")
+    }
     
-   
-}
+    }
+
 

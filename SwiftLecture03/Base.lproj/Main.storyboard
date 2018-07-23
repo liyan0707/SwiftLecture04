@@ -31,6 +31,11 @@
                                     <action selector="btuConfimClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Z8I-1P-84p"/>
                                 </connections>
                             </button>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="umi-9Z-c82" colorLabel="IBBuiltInLabel-Green">
+                                <rect key="frame" x="79" y="169" width="240" height="128"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="1" green="0.65543297414482005" blue="0.2146151062572158" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
@@ -44,8 +49,8 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
-                        <outlet property="butcontrol" destination="6nQ-gn-LoQ" id="tdH-D4-SC7"/>
                         <outlet property="lbname1" destination="Vfq-rX-Rka" id="Je0-s5-amb"/>
+                        <outlet property="touchview" destination="umi-9Z-c82" id="0QS-1z-vlg"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
